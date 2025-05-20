@@ -1,0 +1,109 @@
+Baik Esong, kita akan mulai dari **nol** untuk memastikan kamu mengerti semua prosesnya, dari instalasi tools hingga development backend, frontend, dan integrasi. Berikut adalah **rencana kerja lengkap (timeframe + tahapan)** yang disusun agar ramah untuk pemula:
+
+---
+
+## 🧭 Rencana Umum & Timeframe (Durasi Estimasi: ±6–8 minggu)
+
+### 🔧 Tahap 1: Persiapan Tools (2 hari)
+
+1. **Instalasi Laragon (PHP & MySQL)**
+2. **Setup Git & GitHub**
+3. **Sinkronisasi Proyek Lokal ⇄ GitHub**
+
+---
+
+### 🧱 Tahap 2: Backend Development (Laravel) (2–3 minggu)
+
+**Fitur yang dikembangkan:**
+
+* Manajemen produk, kategori, merk
+* RFQ system (form, email, WhatsApp, dan simpan ke database)
+* Dashboard analytics (pengunjung, RFQ stats)
+* Manajemen testimonial
+* Admin-only theme customization
+
+---
+
+### 🎨 Tahap 3: Frontend Development (Next.js) (2–3 minggu)
+
+**Fitur frontend:**
+
+* Pencarian produk
+* Filter produk (kategori, merk)
+* Perbandingan produk
+* Multi-bahasa (ID & EN)
+* Mode gelap/terang
+* Testimoni pelanggan
+* Share ke sosial media
+* Desain UI mirip [Labconco](https://www.labconco.com/)
+* Responsive (mobile, tablet, desktop)
+
+---
+
+### 🔗 Tahap 4: Integrasi Frontend ⇄ Backend (Laravel API ke Next.js) (3–5 hari)
+
+* Konsumsi API produk, kategori, testimoni, RFQ, dll
+* Validasi dan testing integrasi
+
+---
+
+### 🚀 Tahap 5: Deployment & Hosting di Hostinger (2–3 hari)
+
+* Build frontend → Upload ke public\_html (Next.js static/export)
+* Backend ke subfolder (`/backend`)
+* Konfigurasi domain & subdomain
+* Uji coba produksi (testing dari sisi user & admin)
+
+---
+
+## 📌 Hari Ini: Kita Mulai dari Tahap 1 – Setup Tools
+
+### ✅ Step-by-Step: Instalasi & Setup Laragon + GitHub
+
+#### 1. **Download & Install Laragon**
+
+* Kunjungi: [https://laragon.org/download/](https://laragon.org/download/)
+* Unduh versi **Laragon Full** (termasuk Apache, MySQL, PHP, Composer, dll)
+* Install → Jalankan Laragon → Klik "Start All"
+
+#### 2. **Cek PHP & Composer**
+
+* Buka Terminal Laragon / CMD
+
+```bash
+php -v
+composer -v
+```
+
+> Jika muncul versi PHP dan Composer, berarti sudah sukses.
+
+#### 3. **Setup Git dan GitHub**
+
+* Unduh Git: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+* Install → Buka `Git Bash`
+
+```bash
+git --version
+```
+
+* Buat akun GitHub: [https://github.com/](https://github.com/)
+* Buat repository baru di GitHub, misalnya: `lab-equip-backend`
+* Clone repo ke folder `laragon/www`:
+
+```bash
+cd C:\laragon\www
+git clone https://github.com/username/lab-equip-backend.git
+cd lab-equip-backend
+```
+
+#### 4. **Sinkronisasi Git (Dasar)**
+
+```bash
+git status
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+---
+
